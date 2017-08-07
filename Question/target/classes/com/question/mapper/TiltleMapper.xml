@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.question.dao.TitleDao">
+
+    <select id="getTitle" parameterType="int" resultType="com.question.model.Title">
+    SELECT question_id AS titleId ,content AS titleContent FROM tb_question where question_id=#{0};
+    </select>
+    
+    <select id="getTitleNum" resultType="Integer">
+        SELECT COUNT(*) AS COUNT FROM tb_question
+    </select>
+
+
+</mapper>
